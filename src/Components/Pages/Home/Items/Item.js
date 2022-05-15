@@ -4,7 +4,7 @@ import SingItem from "../SingItem/SingItem";
 const Item = () => {
   const [item, setItem] = useState([]);
   useEffect(() => {
-    fetch("item.json")
+    fetch("https://electra-warehouse-server-rafid.herokuapp.com/inventory")
       .then((res) => res.json())
       .then((data) => setItem(data));
   }, []);
@@ -14,8 +14,8 @@ const Item = () => {
         STORED ITEMS
       </h1>
 
-      <div className="grid grid-cols-3 items-center justify-center">
-        {item.map((sgItem) => (
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center justify-center">
+        {item.slice(5).map((sgItem) => (
           <SingItem item={sgItem}></SingItem>
         ))}
       </div>
