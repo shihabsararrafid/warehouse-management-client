@@ -5,12 +5,13 @@ import {
   MdOutlineConfirmationNumber,
   MdEmojiTransportation,
 } from "react-icons/md";
+import "./SingItem.css";
 const SingItem = ({ item }) => {
   const feature = item.description.Features.split(",");
   console.log(feature);
   return (
-    <div className="border-2 relative mx-5 my-10 rounded-xl shadow-2xl h-[400px] bg-[#e1d3d302]">
-      <h1 className="text-3xl font-bold font-mono uppercase text-[#116F6A]">
+    <div className="border-2 item-container relative mx-5 my-10 rounded-xl shadow-2xl h-[400px] bg-[#e1d3d302]">
+      <h1 className="text-3xl item-header font-bold font-mono uppercase text-[#116F6A]">
         {item.name}
       </h1>
       <img className="w-[200px] block mx-auto" src={item.img} alt="" />
