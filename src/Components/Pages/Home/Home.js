@@ -5,10 +5,10 @@ import banner from "./../../../Images/Banner.jpg";
 
 const Home = () => {
   return (
-    <div className="banner h-[700px] w-full">
+    <div className="banner h-[1000px] lg:h-[700px] w-full">
       {/* <img className="w-full relative" src={banner}></img> */}
 
-      <div className="left-banner h-full justify-center items-center grid grid-cols-2">
+      <div className="left-banner h-full justify-center items-center grid grid-cols-1 lg:grid-cols-2">
         <h1 className="text-5xl  text-white">
           Welcome to the <br />
           <span
