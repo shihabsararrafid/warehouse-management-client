@@ -9,7 +9,9 @@ const Header = () => {
   console.log(open);
   return (
     <div
-      className={`h-[100px] bg-[#116F6A] ${open ? "h-[200px] " : "h-[100px]"}`}
+      className={`lg:h-[100px] bg-[#116F6A] ${
+        open ? "h-[200px] " : "h-[100px]"
+      }`}
     >
       <nav className="flex h-full w-[90%] mx-auto text-white items-center   justify-between">
         <div className="flex h-full items-center">
@@ -20,7 +22,7 @@ const Header = () => {
         </div>
         <ul className="flex h-full items-center w-[50%] uppercase text-lg font-bold justify-around">
           <div
-            className={`lg:flex h-full ${open ? "flex" : "hidden"} 
+            className={`lg:flex lg:flex-row h-full ${open ? "flex" : "hidden"} 
              ${open ? "flex-col" : "hidden "}
            
              items-center w-[95%] justify-around`}
