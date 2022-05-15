@@ -6,7 +6,7 @@ import "./Header.css";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
-  console.log(open);
+  //console.log(open);
   return (
     <div
       className={`lg:h-[100px] bg-[#116F6A] ${
