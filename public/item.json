@@ -1,6 +1,6 @@
 [
     {
-        "name":"Tv",
+        "name":"Television",
         "img":"https://i.ibb.co/Scb3xWj/Tv-pic.webp",
         "description":{
             "Model":"55 inch (Q60AA) QLED 4K Smart TV",
@@ -33,7 +33,7 @@
         "description":{
             "Model":" Samsung 970 EVO Plus",
             "Brand":"Samsung",
-            "Features":"Capacity 500GB Form Factor M.2 (2280)PCIe Gen 3.0 x 4 NVMe 1.3 Samsung V-NAND 3-bit MLC"
+            "Features":"Capacity 500GB, Form Factor M.2 (2280),PCIe Gen 3.0 x 4 NVMe 1.3 ,Samsung V-NAND 3-bit MLC"
         
         },
         "price":"5000",
@@ -44,7 +44,7 @@
 },
     {
         "name":"MotherBoard",
-        "img":"https://i.ibb.co/0M0mtRB/Mother-Board.webp"
+        "img":"https://i.ibb.co/tYy8CkW/Mother-Board.webp"
         ,
         "description":{
             "Model":"MSI MAG B550M Mortar AMD Micro ATX Gaming Motherboard",
@@ -60,7 +60,7 @@
 },
     {
         "name":"Air Conditioner",
-        "img":"https://i.ibb.co/Qkq1Vr2/Airconditioner.webp"
+        "img":"https://i.ibb.co/fNs2R2M/Airconditioner.webp"
         ,
         "description":{
             "Brand":"Walton",
@@ -75,7 +75,7 @@
 },
     {
         "name":"Smart Phone",
-        "img":"https://i.ibb.co/1zmqxjt/Smartphone.webp"
+        "img":"https://i.ibb.co/pzx8bSR/Smartphone.webp"
         ,
         "description":{
             "Model":"Samsung Galaxy Z Flip 3 ","Brand":"Samsung",
@@ -92,11 +92,11 @@
         },
         "price":"100000",
         "quantity":"265",
-        "supplier":""
+        "supplier":"Samsung Bd"
 },
     {
         "name":"Smart Watch",
-        "img":"https://i.ibb.co/z5jk02S/Smart-Watch.webp"
+        "img":"https://i.ibb.co/C8pQ8PN/Smart-Watch.webp"
         ,
         "description":{
             "Model":"Apple Watch 7 Series",
@@ -109,7 +109,7 @@
 },
     {
         "name":"Laptop",
-        "img":"https://i.ibb.co/wpt1vdk/laptop.jpg"
+        "img":"https://i.ibb.co/5MsyXY5/laptop.jpg"
         ,
         "description":{
             "Model":"Acer Aspire A514-54g",
@@ -122,7 +122,7 @@
 },
     {
         "name":"Microwave",
-        "img":"https://i.ibb.co/MNd9kCB/Microwave.jpg"
+        "img":"https://i.ibb.co/cFKmwzn/Microwave.jpg"
         ,
         "description":{
             "Brand":"Panasonic",

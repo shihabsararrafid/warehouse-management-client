@@ -1,0 +1,44 @@
+import React from "react";
+import { GiPriceTag } from "react-icons/gi";
+import { GrUpdate } from "react-icons/gr";
+import {
+  MdOutlineConfirmationNumber,
+  MdEmojiTransportation,
+} from "react-icons/md";
+const SingItem = ({ item }) => {
+  const feature = item.description.Features.split(",");
+  console.log(feature);
+  return (
+    <div className="border-2 relative mx-5 my-10 rounded-xl shadow-2xl h-[400px] bg-[#e1d3d302]">
+      <h1 className="text-3xl font-bold font-mono uppercase text-[#116F6A]">
+        {item.name}
+      </h1>
+      <img className="w-[200px] block mx-auto" src={item.img} alt="" />
+
+      <p className="text-lg  font-bold font-mono">
+        Model:{item.description.Model}
+      </p>
+      <p className="text-lg text-[#EE4C0F] font-bold font-mono">
+        Brand:{item.description.Brand}
+      </p>
+      <p className="text-lg flex items-center justify-center  font-bold font-mono">
+        <GiPriceTag /> Price:{item.price} Tk
+      </p>
+      <p className="text-lg flex text-[#EE4C0F] items-center justify-center   font-bold font-mono">
+        <MdOutlineConfirmationNumber /> Quantity:{item.quantity}
+      </p>
+      <p className="text-lg  flex items-center justify-center   font-bold font-mono">
+        <MdEmojiTransportation /> Supplier:{item.supplier}
+      </p>
+      <button className="font-semibold absolute bottom-0  rounded-3xl uppercase flex justify-center items-center font-mono text-white w-[100%]   px-6 py-3 border-[2px] bg-[#116F6A]">
+        <span className="text-white">
+          {" "}
+          <GrUpdate />
+        </span>{" "}
+        Stock Update
+      </button>
+    </div>
+  );
+};
+
+export default SingItem;
