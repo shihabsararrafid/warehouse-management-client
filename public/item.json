@@ -1,0 +1,150 @@
+[
+    {
+        "name":"Tv",
+        "img":"https://i.ibb.co/Scb3xWj/Tv-pic.webp",
+        "description":{
+            "Model":"55 inch (Q60AA) QLED 4K Smart TV",
+            "Brand":"Samsung",
+            "Features":"100% Color Volume with Quantum Dot,Dual LED,Quantum HD"     
+            }
+        ,
+        "price":"20000",
+        "quantity":"60",
+        "supplier":"Samsung Bd"
+
+
+},
+    {
+        "name":"Ram",
+        "img":"https://i.ibb.co/rm1qtn3/Ram-price.jpg"
+        ,
+        "description":{
+            "Model":"Corsair Vengeance RGB Pro ","Brand":"Corsair",
+            "Features":"16GB DDR4 ,3200MHz ,1.35V"
+        },
+        "price":"4000",
+        "quantity":"89",
+        "supplier":"Startech"
+},
+    {
+        "name":"Ssd",
+        "img":"https://i.ibb.co/414fRSc/Ssd-pic.webp"
+        ,
+        "description":{
+            "Model":" Samsung 970 EVO Plus",
+            "Brand":"Samsung",
+            "Features":"Capacity 500GB Form Factor M.2 (2280)PCIe Gen 3.0 x 4 NVMe 1.3 Samsung V-NAND 3-bit MLC"
+        
+        },
+        "price":"5000",
+        "quantity":"236",
+        "supplier":"Samsung Bd"
+
+
+},
+    {
+        "name":"MotherBoard",
+        "img":"https://i.ibb.co/0M0mtRB/Mother-Board.webp"
+        ,
+        "description":{
+            "Model":"MSI MAG B550M Mortar AMD Micro ATX Gaming Motherboard",
+            "Brand":"MSI",
+            "Features":"AMD Ryzen 5000/4000G Series & AMD Ryzen 3rd Generation Processors,Premium Thermal Solution,Lightning Fast Game experience,Supports up to 5100+(OC) MHz"
+            
+            
+            
+        },
+        "price":"12000",
+        "quantity":"865",
+        "supplier":"MSI Global"
+},
+    {
+        "name":"Air Conditioner",
+        "img":"https://i.ibb.co/Qkq1Vr2/Airconditioner.webp"
+        ,
+        "description":{
+            "Brand":"Walton",
+            "Model":"WSI-INVERNA (SUPERSAVER)-18C [SMART]","Features":"Cooling Capacity 5435 Watts,Compressor Rotary (Inverter),Refrigerant R32"
+            
+
+
+        },
+        "price":"60000",
+        "quantity":"125",
+        "supplier":"Walton"
+},
+    {
+        "name":"Smart Phone",
+        "img":"https://i.ibb.co/1zmqxjt/Smartphone.webp"
+        ,
+        "description":{
+            "Model":"Samsung Galaxy Z Flip 3 ","Brand":"Samsung",
+            "Features":"Display 6.7 inches,Processor  Qualcomm Snapdragon 888,Ram 8 GB, Storage 128 GB,Primary Camera  12 MP,Front Camera 10 MP"
+            
+           
+            
+           
+            
+            
+           
+            
+            
+        },
+        "price":"100000",
+        "quantity":"265",
+        "supplier":""
+},
+    {
+        "name":"Smart Watch",
+        "img":"https://i.ibb.co/z5jk02S/Smart-Watch.webp"
+        ,
+        "description":{
+            "Model":"Apple Watch 7 Series",
+            "Brand":"Apple",
+            "Features":"Largest Display,Improved Durability,Fast Charging,Health And Wellness"
+        },
+        "price":"76000",
+        "quantity":"234",
+        "supplier":"MObile Buzz"
+},
+    {
+        "name":"Laptop",
+        "img":"https://i.ibb.co/wpt1vdk/laptop.jpg"
+        ,
+        "description":{
+            "Model":"Acer Aspire A514-54g",
+            "Brand":"Acer",
+            "Features":"Intel Core i5 11th gen processor, 8gb Ram, 512 gb Nvme ssd, Nvdia mx350 Gpu"
+        },
+        "price":"76000",
+        "quantity":"90",
+        "supplier":"SmartBd"
+},
+    {
+        "name":"Microwave",
+        "img":"https://i.ibb.co/MNd9kCB/Microwave.jpg"
+        ,
+        "description":{
+            "Brand":"Panasonic",
+            "Model":"Panasonic NT-GT1 Oven Toaster",
+            "Features": "Capacity 9 Liter,High Power,15min timer,Non stcik baking tray"
+        },
+        "price":"20000",
+        "quantity":"100",
+        "supplier":"Daraz"
+},
+{
+    "name":"Refrigerator",
+    "img":"https://i.ibb.co/rbKd5Bc/Fridge-pic.webp",
+    
+        "description":{
+            "Brand":"Singer",
+            "Model":"Refrigerator Glass 260 Liter Singer NutriLock-Red",
+            "Features":" 260 Ltr Capacity,50:50 Space Compertment Ratio,Low power consumption,Real Tempered Glass Finish,Nutilock & Freshology will keep your food fresh up to 20 Days"
+           
+
+        },
+        "price":"60000",
+        "quantity":"200",
+        "supplier":"Singer Bd"
+}]
