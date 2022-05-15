@@ -1,0 +1,144 @@
+.nav-bar{
+    line-height: 32px;
+    text-shadow: 0px 0px white, 0px 32px #F70B6C ;
+    overflow: hidden;
+    color: #0000;
+    transition:.4s;
+}
+.nav-bar::after{
+    border: 2px solid red;
+}
+.nav-bar:hover{
+    text-shadow: 0px 0px #F70B6C,0px -32px white ;
+    border-bottom: 2px solid #F70B6C;
+}
+.header-text::after{
+    content:'ELECTRA LOGISTICS';
+    color: #F70B6C;
+    top:0;
+    right:0;
+    position: absolute;
+    animation: typing 6s linear infinite;
+}
+.header-text{
+    position: relative;
+    color: transparent;
+
+}
+@keyframes typing{
+   0%{
+       content: 'E|';
+   }
+   4%{
+       content: 'EL|';
+   }
+   8%{
+       content: 'ELE|';
+   }
+   12%{
+       content: 'ELEC|';
+   }
+   16%{
+       content: 'ELECT|';
+   }
+   20%{
+       content: 'ELECTR|';
+   }
+   24%{
+       content: 'ELECTRA|';
+   }
+   28%{
+       content: 'ELECTRA |';
+   }
+   32%{
+       content: 'ELECTRA L|';
+   }
+   36%{
+       content: 'ELECTRA LO|';
+   }
+   40%{
+       content: 'ELECTRA LOG|';
+   }
+   44%{
+       content: 'ELECTRA LOGI|';
+   }
+   48%{
+       content: 'ELECTRA LOGIS|';
+   }
+   52%{
+       content: 'ELECTRA LOGIST|';
+   }
+   56%{
+       content: 'ELECTRA LOGISTI|';
+   }
+   60%{
+       content: 'ELECTRA LOGISTIC|';
+   }
+   61%,83%{
+       content: 'ELECTRA LOGISTICS|';
+   }
+   84%{
+       content: 'ELECTRA LOGISTIC|';
+   }
+   85%{
+       content: 'ELECTRA LOGISTI|';
+   }
+   86%{
+       content: 'ELECTRA LOGIST|';
+   }
+   87%{
+       content: 'ELECTRA LOGIS|';
+   }
+   88%{
+       content: 'ELECTRA LOGI|';
+   }
+   89%{
+       content: 'ELECTRA LOG|';
+   }
+   90%{
+       content: 'ELECTRA LO|';
+   }
+   91%{
+       content: 'ELECTRA L|';
+   }
+   92%{
+       content: 'ELECTRA |';
+   }
+   93%{
+       content: 'ELECTRA|';
+   }
+   94%{
+       content: 'ELECTR|';
+   }
+   95%{
+       content: 'ELECT|';
+   }
+   96%{
+       content: 'ELEC|';
+   }
+   97%{
+       content: 'ELE|';
+   }
+   98%{
+       content: 'EL|';
+   }
+   99%{
+       content: 'E|';
+   }
+   100%{
+    content: '|';
+}
+   
+  
+}
+/* .header-text {
+    line-height: 1.2em;
+    color: #0000;
+    text-shadow: 0px 0px #e31212, 0px 1.2em #1160d9;
+    overflow: hidden;
+    transition: 0.3s;
+  }
+  .header-text:hover {
+    text-shadow: 0 -1.2em #0000, 0 0 #1160d9;
+  } */
+  
