@@ -31,7 +31,7 @@ const SingItem = ({ item }) => {
       <p className="text-lg  flex items-center justify-center   font-bold font-mono">
         <MdEmojiTransportation /> Supplier:{item.supplier}
       </p>
-      <button className="font-semibold absolute bottom-0  rounded-3xl uppercase flex justify-center items-center font-mono text-white w-[100%]   px-6 py-3 border-[2px] bg-[#116F6A]">
+      <button className="font-semibold hover:bg-white hover:text-[#116F6A] duration-500 hover:border-[#116F6A] hover:border-[3px] absolute bottom-0  rounded-3xl uppercase flex justify-center items-center font-mono text-white w-[100%]   px-6 py-3 border-[2px] bg-[#116F6A]">
         <span className="text-white">
           {" "}
           <GrUpdate />
