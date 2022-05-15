@@ -17,7 +17,7 @@ const Header = () => {
         <div className="flex h-full items-center">
           {/* <img className="w-[80px]" src={logo}></img> */}
           <p className="uppercase header-text font-mono text-2xl font-bold">
-            Electra Logistics{" "}
+            Electra warehouse
           </p>
         </div>
         <ul className="flex h-full items-center w-[50%] uppercase text-lg font-bold justify-around">

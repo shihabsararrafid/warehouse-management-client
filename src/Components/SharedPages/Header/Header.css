@@ -13,7 +13,7 @@
     border-bottom: 2px solid #F70B6C;
 }
 .header-text::after{
-    content:'ELECTRA LOGISTICS';
+    content:'ELECTRA WAREHOUSE';
     color: #F70B6C;
     top:0;
     right:0;
@@ -28,6 +28,7 @@
 @keyframes typing{
    0%{
        content: 'E|';
+       font-weight: bold;
    }
    4%{
        content: 'EL|';
@@ -51,55 +52,55 @@
        content: 'ELECTRA |';
    }
    32%{
-       content: 'ELECTRA L|';
+       content: 'ELECTRA W|';
    }
    36%{
-       content: 'ELECTRA LO|';
+       content: 'ELECTRA WA|';
    }
    40%{
-       content: 'ELECTRA LOG|';
+       content: 'ELECTRA WAR|';
    }
    44%{
-       content: 'ELECTRA LOGI|';
+       content: 'ELECTRA WARE|';
    }
    48%{
-       content: 'ELECTRA LOGIS|';
+       content: 'ELECTRA WAREH|';
    }
    52%{
-       content: 'ELECTRA LOGIST|';
+       content: 'ELECTRA WAREHO|';
    }
    56%{
-       content: 'ELECTRA LOGISTI|';
+       content: 'ELECTRA WAREHOU|';
    }
    60%{
-       content: 'ELECTRA LOGISTIC|';
+       content: 'ELECTRA WAREHOUS|';
    }
    61%,83%{
-       content: 'ELECTRA LOGISTICS|';
+       content: 'ELECTRA WAREHOUSE|';
    }
    84%{
-       content: 'ELECTRA LOGISTIC|';
+       content: 'ELECTRA WAREHOUS|';
    }
    85%{
-       content: 'ELECTRA LOGISTI|';
+       content: 'ELECTRA WAREHOU|';
    }
    86%{
-       content: 'ELECTRA LOGIST|';
+       content: 'ELECTRA WAREHO|';
    }
    87%{
-       content: 'ELECTRA LOGIS|';
+       content: 'ELECTRA WAREH|';
    }
    88%{
-       content: 'ELECTRA LOGI|';
+       content: 'ELECTRA WARE|';
    }
    89%{
-       content: 'ELECTRA LOG|';
+       content: 'ELECTRA WAR|';
    }
    90%{
-       content: 'ELECTRA LO|';
+       content: 'ELECTRA WA|';
    }
    91%{
-       content: 'ELECTRA L|';
+       content: 'ELECTRA W|';
    }
    92%{
        content: 'ELECTRA |';
