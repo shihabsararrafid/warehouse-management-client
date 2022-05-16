@@ -8,11 +8,11 @@ import {
 import { AiFillDelete } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import "./SingItem.css";
-const SingItem = ({ item, open }) => {
+const SingItem = ({ getId, item, open }) => {
   console.log(item._id);
   //Implementing delete operation by sending the id of the item to the server side
   const handleDeleteBtn = (id) => {
-    console.log(id);
+    getId(id);
     const url = `http://localhost:5000/inventory/${id}`;
     fetch(url, {
       method: "DELETE",
