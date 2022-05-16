@@ -9,16 +9,20 @@ import { AiFillDelete } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import "./SingItem.css";
 const SingItem = ({ getId, item, open }) => {
-  console.log(item._id);
   //Implementing delete operation by sending the id of the item to the server side
   const handleDeleteBtn = (id) => {
-    getId(id);
-    const url = `http://localhost:5000/inventory/${id}`;
-    fetch(url, {
-      method: "DELETE",
-    })
-      .then((res) => res.json())
-      .then((data) => console.log(data));
+    const confirmation = window.confirm(
+      `Are You Sure to delete the Product Named ${item.name}`
+    );
+    if (confirmation) {
+      getId(id);
+      const url = `http://localhost:5000/inventory/${id}`;
+      fetch(url, {
+        method: "DELETE",
+      })
+        .then((res) => res.json())
+        .then((data) => console.log(data));
+    }
   };
   return (
     <div className="border-2 item-container relative mx-5 my-10 rounded-xl shadow-2xl h-[500px] bg-[#e1d3d302]">

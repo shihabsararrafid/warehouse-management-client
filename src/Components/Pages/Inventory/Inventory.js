@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import SingItem from "../Home/SingItem/SingItem";
 import "./Inventory.css";
 const Inventory = () => {
@@ -29,6 +30,11 @@ const Inventory = () => {
           ></SingItem>
         ))}
       </div>
+      <Link to="/additem">
+        <button className="font-semibold text-2xl  my-9 lg:left-1/3 left-1/4  mx-auto hover:bg-white hover:text-[#1aee0f] duration-500 hover:border-[#1aee0f] hover:border-[3px]   rounded-3xl uppercase flex justify-center items-center font-mono text-white w-[60%]  lg:w-[30%]   px-6 py-3 border-[2px] bg-[#1aee0f]">
+          Add New Item
+        </button>
+      </Link>
     </div>
   );
 };
