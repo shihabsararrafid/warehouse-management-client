@@ -10,6 +10,16 @@ import { Link } from "react-router-dom";
 import "./SingItem.css";
 const SingItem = ({ item, open }) => {
   console.log(item._id);
+  //Implementing delete operation by sending the id of the item to the server side
+  const handleDeleteBtn = (id) => {
+    console.log(id);
+    const url = `http://localhost:5000/inventory/${id}`;
+    fetch(url, {
+      method: "DELETE",
+    })
+      .then((res) => res.json())
+      .then((data) => console.log(data));
+  };
   return (
     <div className="border-2 item-container relative mx-5 my-10 rounded-xl shadow-2xl h-[500px] bg-[#e1d3d302]">
       <h1 className="text-3xl item-header font-bold font-mono uppercase text-[#116F6A]">
@@ -33,7 +43,12 @@ const SingItem = ({ item, open }) => {
         <MdEmojiTransportation /> Supplier:{item.supplier}
       </p>
       <div className="absolute bottom-0 w-full flex flex-col">
-        <button className="font-semibold hover:bg-white hover:text-[#116F6A] duration-500 hover:border-[#116F6A] hover:border-[3px]   rounded-3xl uppercase flex justify-center items-center font-mono text-white w-[100%]   px-6 py-3 border-[2px] bg-[#116F6A]">
+        <button
+          onClick={() => handleDeleteBtn(item._id)}
+          className={`font-semibold ${
+            open ? "flex" : "hidden"
+          } hover:bg-white hover:text-[#EE4C0F] duration-500 hover:border-[#EE4C0F] hover:border-[3px]   rounded-3xl uppercase  justify-center items-center font-mono text-white w-[100%]   px-6 py-3 border-[2px] bg-[#EE4C0F]`}
+        >
           <span className="text-white">
             {" "}
             <AiFillDelete />
