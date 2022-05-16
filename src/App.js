@@ -6,6 +6,7 @@ import Header from "./Components/SharedPages/Header/Header";
 import Inventory from "./Components/Pages/Inventory/Inventory";
 import SingInventory from "./Components/Pages/Inventory/SingInventory";
 import AddItem from "./Components/Pages/AddItem/AddItem";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           element={<SingInventory></SingInventory>}
         ></Route>
       </Routes>
+      <ToastContainer />
     </div>
   );
 }

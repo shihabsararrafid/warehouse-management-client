@@ -1,6 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
+import { toast, ToastContainer } from "react-toastify";
 
 const AddItem = () => {
   const navigate = useNavigate();
@@ -11,11 +12,25 @@ const AddItem = () => {
     reset,
   } = useForm();
   const onSubmit = (data, e) => {
-    console.log(data);
-    navigate("/inventory");
+    const url = "http://localhost:5000/inventory/";
+    fetch(url, {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        //console.log(data);
+        // toast("New Item added successfully");
+        // alert("New Item added successfully");
+        navigate("/inventory");
+      });
   };
   return (
     <div>
+      <ToastContainer></ToastContainer>
       <h1 className="text-4xl text-green-600 font-bold uppercase">Add Item</h1>
       <form onSubmit={handleSubmit(onSubmit)}>
         <input
