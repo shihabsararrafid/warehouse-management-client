@@ -5,9 +5,10 @@ import {
   MdOutlineConfirmationNumber,
   MdEmojiTransportation,
 } from "react-icons/md";
+import { AiFillDelete } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import "./SingItem.css";
-const SingItem = ({ item }) => {
+const SingItem = ({ item, open }) => {
   console.log(item._id);
   return (
     <div className="border-2 item-container relative mx-5 my-10 rounded-xl shadow-2xl h-[500px] bg-[#e1d3d302]">
@@ -31,16 +32,24 @@ const SingItem = ({ item }) => {
       <p className="text-lg  flex items-center justify-center   font-bold font-mono">
         <MdEmojiTransportation /> Supplier:{item.supplier}
       </p>
-
-      <Link to={`/inventory/${item._id}`}>
-        <button className="font-semibold hover:bg-white hover:text-[#116F6A] duration-500 hover:border-[#116F6A] hover:border-[3px] absolute bottom-0  rounded-3xl uppercase flex justify-center items-center font-mono text-white w-[100%]   px-6 py-3 border-[2px] bg-[#116F6A]">
+      <div className="absolute bottom-0 w-full flex flex-col">
+        <button className="font-semibold hover:bg-white hover:text-[#116F6A] duration-500 hover:border-[#116F6A] hover:border-[3px]   rounded-3xl uppercase flex justify-center items-center font-mono text-white w-[100%]   px-6 py-3 border-[2px] bg-[#116F6A]">
           <span className="text-white">
             {" "}
-            <GrUpdate />
+            <AiFillDelete />
           </span>{" "}
-          Stock Update{" "}
+          Delete Inventory{" "}
         </button>
-      </Link>
+        <Link to={`/inventory/${item._id}`}>
+          <button className="font-semibold hover:bg-white hover:text-[#116F6A] duration-500 hover:border-[#116F6A] hover:border-[3px]   rounded-3xl uppercase flex justify-center items-center font-mono text-white w-[100%]   px-6 py-3 border-[2px] bg-[#116F6A]">
+            <span className="text-white">
+              {" "}
+              <GrUpdate />
+            </span>{" "}
+            Stock Update{" "}
+          </button>
+        </Link>
+      </div>
     </div>
   );
 };

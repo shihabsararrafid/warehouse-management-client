@@ -35,8 +35,11 @@ const SingInventory = () => {
   const handleRestock = (e) => {
     e.preventDefault();
     const amount = parseInt(e.target.amount.value);
-    setQuantity(parseInt(quantity) + amount);
-    updateData(parseInt(quantity) + amount);
+    if (amount >= 0) {
+      setQuantity(parseInt(quantity) + amount);
+      updateData(parseInt(quantity) + amount);
+    }
+
     e.target.amount.value = "";
   };
   const updateData = (quan) => {
@@ -91,13 +94,14 @@ const SingInventory = () => {
       <br />
       <form
         onSubmit={handleRestock}
-        className=" my-20 w-full mx-auto  lg:w-[40%] lg:right-0 flex flex-row "
+        className=" my-10 w-full mx-auto  lg:w-[40%] lg:right-0 flex flex-row "
       >
         <input
           className="border-2 text-center rounded-lg border-[#116F6A]"
           type="number"
           name="amount"
           id=""
+          defaultValue={0}
           placeholder="Re Stock Amount"
         />
         <input
@@ -106,6 +110,11 @@ const SingInventory = () => {
           value="Re Stock"
         />
       </form>
+      <Link to="/inventory">
+        <button className="font-semibold text-2xl  my-9 lg:left-1/3 left-1/4  mx-auto hover:bg-white hover:text-[#EE4C0F] duration-500 hover:border-[#EE4C0F] hover:border-[3px]   rounded-3xl uppercase flex justify-center items-center font-mono text-white w-[60%]  lg:w-[30%]   px-6 py-3 border-[2px] bg-[#EE4C0F]">
+          Manage Inventories
+        </button>
+      </Link>
 
       <button
         onClick={handleQuantity}

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import SingItem from "../Home/SingItem/SingItem";
-
+import "./Inventory.css";
 const Inventory = () => {
   const [inventories, setInventories] = useState([]);
   useEffect(() => {
@@ -10,13 +10,13 @@ const Inventory = () => {
   }, []);
   return (
     <div>
-      <h1 className="text-center text-6xl font-mono font-bold text-[#116F6A]">
+      <h1 className="text-center flex justify-center text-6xl font-mono font-bold text-[#4209c5]">
         ALL INVENTORIES
       </h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center justify-center">
         {inventories.map((sgItem) => (
-          <SingItem item={sgItem}></SingItem>
+          <SingItem open={true} key={sgItem._id} item={sgItem}></SingItem>
         ))}
       </div>
     </div>
