@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { GiPriceTag } from "react-icons/gi";
+import { GiPriceTag, GiReturnArrow } from "react-icons/gi";
 import { GrUpdate } from "react-icons/gr";
+import { IconName } from "react-icons/gi";
 import {
   MdOutlineConfirmationNumber,
   MdEmojiTransportation,
@@ -29,25 +30,31 @@ const SingInventory = () => {
   const handleQuantity = () => {
     const newQuantity = parseInt(quantity) - 1;
     setQuantity(newQuantity);
-    updateData();
+    updateData(newQuantity);
   };
-  console.log(quantity);
-  const updateData = () => {
-    console.log(quantity - 1);
+  const handleRestock = (e) => {
+    e.preventDefault();
+    const amount = parseInt(e.target.amount.value);
+    setQuantity(parseInt(quantity) + amount);
+    updateData(parseInt(quantity) + amount);
+    e.target.amount.value = "";
+  };
+  const updateData = (quan) => {
+    //console.log(quantity - 1);
     const url = `http://localhost:5000/inventory/${itemid}`;
     fetch(url, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
       },
-      body: JSON.stringify({ quantity: quantity - 1 }),
+      body: JSON.stringify({ quantity: quan }),
     })
       .then((res) => res.json())
       .then((data) => console.log(data));
   };
 
   return (
-    <div className="border-2 item-container relative mx-5 my-10 rounded-xl shadow-2xl h-[600px] bg-[#e1d3d302]">
+    <div className="border-2 item-container relative mx-5 my-10 rounded-xl shadow-2xl h-auto bg-[#e1d3d302]">
       <h1 className="text-3xl item-header font-bold font-mono uppercase text-[#116F6A]">
         {inventory.name}
       </h1>
@@ -57,7 +64,6 @@ const SingInventory = () => {
       </p>
       <p className="text-lg text-[#EE4C0F] font-bold font-mono">
         Brand:{inventory.description?.Brand}
-        Lenght:{feature?.length}
       </p>
       <p className="text-lg flex items-center justify-center  font-bold font-mono">
         <GiPriceTag /> Price:{inventory.price} Tk
@@ -81,12 +87,34 @@ const SingInventory = () => {
           {single}
         </p>
       ))}
+      <br />
+      <br />
+      <form
+        onSubmit={handleRestock}
+        className=" my-20 w-full mx-auto  lg:w-[40%] lg:right-0 flex flex-row "
+      >
+        <input
+          className="border-2 text-center rounded-lg border-[#116F6A]"
+          type="number"
+          name="amount"
+          id=""
+          placeholder="Re Stock Amount"
+        />
+        <input
+          className="font-semibold  hover:bg-white hover:text-[#116F6A] duration-500 hover:border-[#116F6A] hover:border-[3px]   rounded-3xl uppercase flex justify-center items-center font-mono text-white w-[60%]  lg:w-full   px-6 py-3 border-[2px] bg-[#116F6A]"
+          type="submit"
+          value="Re Stock"
+        />
+      </form>
+
       <button
         onClick={handleQuantity}
-        className="font-semibold hover:bg-white hover:text-[#116F6A] duration-500 hover:border-[#116F6A] hover:border-[3px] absolute bottom-0  rounded-3xl uppercase flex justify-center items-center font-mono text-white w-[30%]   px-6 py-3 border-[2px] bg-[#116F6A]"
+        className="font-semibold lg:left-1/3 left-1/4  mx-auto hover:bg-white hover:text-[#116F6A] duration-500 hover:border-[#116F6A] hover:border-[3px] absolute bottom-0  rounded-3xl uppercase flex justify-center items-center font-mono text-white w-[60%]  lg:w-[30%]   px-6 py-3 border-[2px] bg-[#116F6A]"
       >
         delivered
       </button>
+
+      <br />
     </div>
   );
 };

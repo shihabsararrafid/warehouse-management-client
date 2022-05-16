@@ -15,7 +15,7 @@ const Item = () => {
       </h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center justify-center">
-        {item.slice(5).map((sgItem) => (
+        {item.slice(0, 6).map((sgItem) => (
           <SingItem item={sgItem}></SingItem>
         ))}
       </div>
