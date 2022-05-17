@@ -12,7 +12,7 @@ const AddItem = () => {
     reset,
   } = useForm();
   const onSubmit = (data, e) => {
-    const url = "http://localhost:5000/inventory/";
+    const url = "http://localhost:5000/inventory";
     fetch(url, {
       method: "POST",
       headers: {
@@ -25,8 +25,8 @@ const AddItem = () => {
         //console.log(data);
         // toast("New Item added successfully");
         // alert("New Item added successfully");
-        navigate("/inventory");
       });
+    navigate("/inventory");
   };
   return (
     <div>

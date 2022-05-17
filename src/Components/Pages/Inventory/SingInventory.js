@@ -36,21 +36,22 @@ const SingInventory = () => {
     e.preventDefault();
     const amount = parseInt(e.target.amount.value);
     if (amount >= 0) {
-      setQuantity(parseInt(quantity) + amount);
-      updateData(parseInt(quantity) + amount);
+      const newQuantity = parseInt(quantity) + amount;
+      setQuantity(newQuantity);
+      updateData(newQuantity);
     }
 
     e.target.amount.value = "";
   };
-  const updateData = (quan) => {
+  const updateData = (any) => {
     //console.log(quantity - 1);
-    const url = `http://localhost:5000/inventory/${itemid}`;
+    const url = `https://electra-warehouse-server-rafid.herokuapp.com/inventory/${itemid}`;
     fetch(url, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
       },
-      body: JSON.stringify({ quantity: quan }),
+      body: JSON.stringify({ quantity: any }),
     })
       .then((res) => res.json())
       .then((data) => console.log(data));

@@ -7,6 +7,7 @@ import Inventory from "./Components/Pages/Inventory/Inventory";
 import SingInventory from "./Components/Pages/Inventory/SingInventory";
 import AddItem from "./Components/Pages/AddItem/AddItem";
 import { ToastContainer } from "react-toastify";
+import Login from "./Components/Pages/Home/Login/Login";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/home" element={<Home></Home>}></Route>
         <Route path="/inventory" element={<Inventory></Inventory>}></Route>
         <Route path="/additem" element={<AddItem></AddItem>}></Route>
+        <Route path="/login" element={<Login></Login>}></Route>
         <Route
           path="/inventory/:id"
           element={<SingInventory></SingInventory>}
