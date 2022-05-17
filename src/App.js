@@ -8,6 +8,7 @@ import SingInventory from "./Components/Pages/Inventory/SingInventory";
 import AddItem from "./Components/Pages/AddItem/AddItem";
 import { ToastContainer } from "react-toastify";
 import Login from "./Components/Pages/Home/Login/Login";
+import Register from "./Components/Authentication/Register/Register";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/inventory" element={<Inventory></Inventory>}></Route>
         <Route path="/additem" element={<AddItem></AddItem>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
+        <Route path="/register" element={<Register></Register>}></Route>
         <Route
           path="/inventory/:id"
           element={<SingInventory></SingInventory>}
