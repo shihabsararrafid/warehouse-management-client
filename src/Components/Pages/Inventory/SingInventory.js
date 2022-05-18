@@ -27,11 +27,11 @@ const SingInventory = () => {
         setQuantity(data?.quantity);
       });
   }, [itemid]);
-  const handleQuantity = () => {
+  const handleQuantity = async () => {
     const newQuantity = parseInt(quantity) - 1;
     setQuantity(newQuantity);
-    console.log(quantity);
-    updateData(quantity);
+    console.log(newQuantity);
+    updateData(newQuantity);
   };
 
   const handleRestock = (e) => {
@@ -59,7 +59,10 @@ const SingInventory = () => {
       .then((res) => res.json())
       .then((data) => console.log(data));
   };
-
+  //   if (performance.navigation.type == performance.navigation.TYPE_RELOAD) {
+  //     console.info("This page is reloaded");
+  //     // updateData(quantity);
+  //   }
   return (
     <div className="border-2 item-container relative mx-5 my-10 rounded-xl shadow-2xl h-auto bg-[#e1d3d302]">
       <h1 className="text-3xl item-header font-bold font-mono uppercase text-[#116F6A]">
