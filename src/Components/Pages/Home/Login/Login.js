@@ -20,6 +20,8 @@ import right from "./../../../../Images/right.jpg";
 
 import { useSignInWithGoogle } from "react-firebase-hooks/auth";
 import auth from "../../../../firebase.init";
+import { toast, ToastContainer } from "react-toastify";
+import Loading from "../../../SharedPages/Loading/Loading";
 
 const Login = () => {
   const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
@@ -44,9 +46,10 @@ const Login = () => {
         const msg = document.getElementById("success");
         msg.style.display = "none";
       }, 5000);
-      setTimeout(() => {
-        navigate(from, { replace: true });
-      }, 6000);
+      navigate(from, { replace: true });
+    }
+    if (loading) {
+      return <Loading></Loading>;
     }
     if (error) {
       const newmsg = error.message;
@@ -198,6 +201,7 @@ const Login = () => {
           <h1
             onClick={(e) => {
               sendPasswordResetEmail(email);
+              toast("Password reset send");
             }}
             className="text-center cursor-pointer hover:text-red-500"
           >

@@ -12,6 +12,7 @@ import Register from "./Components/Authentication/Register/Register";
 import NotFound from "./Components/Pages/NotFound/NotFound";
 import ManageItem from "./Components/Pages/LoggedUser/ManageItem/ManageItem";
 import MyItem from "./Components/Pages/LoggedUser/MyItem/MyItem";
+import RequireAuth from "./Components/RequireAuth/RequieAuth";
 
 function App() {
   return (
@@ -26,14 +27,32 @@ function App() {
         <Route path="/register" element={<Register></Register>}></Route>
         <Route
           path="/inventory/:id"
-          element={<SingInventory></SingInventory>}
+          element={
+            <RequireAuth>
+              <SingInventory></SingInventory>
+            </RequireAuth>
+          }
         ></Route>
-        <Route path="/managemyitem" element={<ManageItem></ManageItem>}></Route>
-        <Route path="/myitem" element={<MyItem></MyItem>}></Route>
+        <Route
+          path="/managemyitem"
+          element={
+            <RequireAuth>
+              <ManageItem></ManageItem>
+            </RequireAuth>
+          }
+        ></Route>
+        <Route
+          path="/myitem"
+          element={
+            <RequireAuth>
+              <MyItem></MyItem>
+            </RequireAuth>
+          }
+        ></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
 
-      <ToastContainer />
+      <ToastContainer autoClose={8000} />
     </div>
   );
 }
