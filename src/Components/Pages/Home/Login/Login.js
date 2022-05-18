@@ -115,7 +115,7 @@ const Login = () => {
       <div
         id="success"
         className="w-[200px] hidden  h-[35px] lg:top-[86px] top-[95px] left-1/2 lg:left-[500px]
-             absolute items-center font-semibold form-container bg-white justify-evenly  border-[2px] border-[#6C05F6] rounded-lg "
+             absolute items-center font-semibold form-container bg-white justify-evenly  border-[2px] border-[#116F6A] rounded-lg "
       >
         <img className="w-[30px]" src={right} alt="" />{" "}
         <span>Log In Succesful</span>
@@ -131,11 +131,11 @@ const Login = () => {
         <div>
           <h1 className="font-bold text-center ">
             To Continue, log in to{" "}
-            <span className="text-[#6C05F6]">GYM GURU</span>{" "}
+            <span className="text-[#116F6A]">ELECTRA WAREHOUSE</span>{" "}
           </h1>
           <button
             onClick={googleSignIn}
-            className="text-center hover:text-[#6C05F6] hover:border-[#6C05F6] flex items-center justify-evenly  w-[90%] ] mx-auto  my-6 text-lg py-4 border-[1px] font-semibold border-black bg-white text-black rounded-full"
+            className="text-center hover:text-[#116F6A] hover:border-[#116F6A] flex items-center justify-evenly  w-[90%] ] mx-auto  my-6 text-lg py-4 border-[1px] font-semibold border-black bg-white text-black rounded-full"
           >
             <img className="w-[30px]" src={google} alt="" />{" "}
             <span>CONTINUE WITH TO GOOGLE</span>
@@ -144,18 +144,18 @@ const Login = () => {
             <img className="w-[30px]" src={facebook} alt="" />
             <span>CONTINUE WITH TO FACEBOOK</span>
           </button>
-          <button className="text-center hover:text-[#6C05F6] hover:border-[#6C05F6] flex items-center justify-evenly  w-[90%] ] mx-auto  my-6 text-lg py-4 border-[1px] font-semibold border-black bg-white text-black rounded-full">
+          <button className="text-center hover:text-[#116F6A] hover:border-[#116F6A] flex items-center justify-evenly  w-[90%] ] mx-auto  my-6 text-lg py-4 border-[1px] font-semibold border-black bg-white text-black rounded-full">
             <img className="w-[30px]" src={github} alt="" />
             <span>CONTINUE WITH TO GITHUB</span>
           </button>
         </div>
 
         <div className="flex items-center justify-center">
-          <hr className="w-[40%] h-[2px] bg-[#6C05F6]" />
+          <hr className="w-[40%] h-[2px] bg-[#116F6A]" />
           <span className="block mx-3 font-bold">OR</span>
-          <hr className="w-[40%] h-[2px] bg-[#6C05F6]" />
+          <hr className="w-[40%] h-[2px] bg-[#116F6A]" />
         </div>
-        <h1 className="text-center text-[#6C05F6] font-bold text-3xl my-6">
+        <h1 className="text-center text-[#116F6A] font-bold text-3xl my-6">
           LOG IN
         </h1>
         <label className="text-lg font-semibold mx-14 my-10" htmlFor="Email">
@@ -205,19 +205,19 @@ const Login = () => {
           </h1>
           <button
             onClick={emailLogIn}
-            className="px-16 block mr-0 justify-end  w-[90%] lg:w-[60%]   my-6 text-xl py-4 border-2 border-[#6C05F6] font-bold duration-500 bg-[#6C05F6] text-white hover:text-[#6C05F6] hover:border-[#6C05F6] hover:bg-white rounded-full"
+            className="px-16 block mr-0 justify-end  w-[90%] lg:w-[60%]   my-6 text-xl py-4 border-2 border-[#116F6A] font-bold duration-500 bg-[#116F6A] text-white hover:text-[#116F6A] hover:border-[#116F6A] hover:bg-white rounded-full"
           >
             LOG IN
           </button>
         </div>
 
-        <h1 className="text-center text-2xl font-bold text-[#6C05F6]">
+        <h1 className="text-center text-2xl font-bold text-[#116F6A]">
           Don't Have An Account ?
         </h1>
         <Link to="/register">
           {" "}
-          <button className="text-center block   w-[90%] ] mx-auto  my-6 text-lg py-4 border-[1px] font-semibold border-black hover:text-[#6C05F6] hover:border-[#6C05F6] bg-white text-black rounded-full">
-            SIGN UP TO GYMGURU
+          <button className="text-center block   w-[90%] ] mx-auto  my-6 text-lg py-4 border-[1px] font-semibold border-black hover:text-[#116F6A] hover:border-[#116F6A] bg-white text-black rounded-full">
+            SIGN UP TO ELECTRA WAREHOUSE
           </button>
         </Link>
       </form>

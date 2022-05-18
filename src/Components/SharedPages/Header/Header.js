@@ -24,7 +24,7 @@ const Header = () => {
   return (
     <div
       className={`lg:h-[100px] bg-[#116F6A] ${
-        open ? "h-[200px] " : "h-[100px]"
+        open ? "h-[300px] " : "h-[100px]"
       }`}
     >
       <nav className="flex h-full w-[90%] mx-auto text-white items-center   justify-between">
@@ -34,7 +34,7 @@ const Header = () => {
             Electra warehouse
           </p>
         </div>
-        <ul className="flex h-full items-center w-[50%] uppercase text-lg font-bold justify-around">
+        <ul className="flex h-full items-center w-[70%] uppercase text-lg font-bold justify-around">
           <div
             className={`lg:flex lg:flex-row h-full ${open ? "flex" : "hidden"} 
              ${open ? "flex-col" : "hidden "}
@@ -70,10 +70,19 @@ const Header = () => {
                 </>
               )}
               {user ? (
-                <div className="flex items-center">
-                  <p className="text-sm text-violet-600">
+                <div className="flex lg:flex-row flex-col items-center">
+                  <p className="text-sm text-white">
                     {user.displayName?.slice(0, 12)}
                   </p>
+                  <div className="flex flex-col text-lg">
+                    <p>
+                      <Link to="/managemyitem">Manage My Items</Link>
+                    </p>
+                    <p>
+                      <Link to="/myitem">My Items</Link>
+                    </p>
+                  </div>
+
                   <div className="w-[60px] rounded-full flex justify-center bg-white">
                     <img
                       className="w-[50px] p-1  rounded-full"

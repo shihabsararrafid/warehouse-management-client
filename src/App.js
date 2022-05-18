@@ -9,6 +9,9 @@ import AddItem from "./Components/Pages/AddItem/AddItem";
 import { ToastContainer } from "react-toastify";
 import Login from "./Components/Pages/Home/Login/Login";
 import Register from "./Components/Authentication/Register/Register";
+import NotFound from "./Components/Pages/NotFound/NotFound";
+import ManageItem from "./Components/Pages/LoggedUser/ManageItem/ManageItem";
+import MyItem from "./Components/Pages/LoggedUser/MyItem/MyItem";
 
 function App() {
   return (
@@ -25,7 +28,11 @@ function App() {
           path="/inventory/:id"
           element={<SingInventory></SingInventory>}
         ></Route>
+        <Route path="/managemyitem" element={<ManageItem></ManageItem>}></Route>
+        <Route path="/myitem" element={<MyItem></MyItem>}></Route>
+        <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
+
       <ToastContainer />
     </div>
   );
