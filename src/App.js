@@ -14,6 +14,7 @@ import ManageItem from "./Components/Pages/LoggedUser/ManageItem/ManageItem";
 import MyItem from "./Components/Pages/LoggedUser/MyItem/MyItem";
 import RequireAuth from "./Components/RequireAuth/RequieAuth";
 import Blogs from "./Components/Pages/Blogs/Blogs";
+import Footer from "./Components/SharedPages/Footer/Footer";
 
 function App() {
   return (
@@ -55,6 +56,7 @@ function App() {
       </Routes>
 
       <ToastContainer autoClose={8000} />
+      <Footer></Footer>
     </div>
   );
 }

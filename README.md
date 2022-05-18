@@ -5,7 +5,7 @@ The name of the project is `ELECTRA WAREHOUSE` as stated above.
 
 It has been hoisted at firebase . By Clicking the Following text will take to the live site of the project.
 [ELECTRA WAREHOUSE](https://electra-warehouse-manage.web.app/)
-Moreover it is my first full stack website . As i used node js and mongodb for the server side . Moreover I hosted my server to [heroku] app.
+Moreover it is my first full stack website . As i used node js and mongodb for the server side . Moreover I hosted my server to `heroku` app.
 
 ## Project Details
 

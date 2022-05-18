@@ -5,6 +5,7 @@ import banner from "./../../../Images/Banner.jpg";
 import Banner from "./Banner/Banner";
 import Item from "./Items/Item";
 import { Link } from "react-router-dom";
+import Supplier from "./Supplier/Supplier";
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
           Manage Inventories
         </button>
       </Link>
+      <Supplier></Supplier>
     </div>
   );
 };
