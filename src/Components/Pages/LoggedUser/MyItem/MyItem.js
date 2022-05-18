@@ -20,6 +20,21 @@ const MyItem = () => {
       .then((res) => res.json())
       .then((data) => setMyItem(data));
   }, []);
+  const handleDeleteBtn = (id) => {
+    const confirmation = window.confirm(`Are You Sure to delete the Product ?`);
+    if (confirmation) {
+      const url = `http://localhost:5000/inventory/${id}`;
+      fetch(url, {
+        method: "DELETE",
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+        });
+      const itmdel = myItem.filter((itm) => itm._id !== id);
+      setMyItem(itmdel);
+    }
+  };
   return (
     <div>
       <h1>You Have Added {myItem.length} items</h1>
@@ -47,7 +62,10 @@ const MyItem = () => {
               <p className="text-lg  flex items-center justify-center   font-bold font-mono">
                 <MdEmojiTransportation /> Supplier:{itm.supplier}
               </p>
-              <button className="font-semibold absolute bottom-0   hover:bg-white hover:text-[#116F6A] duration-500 hover:border-[#116F6A] hover:border-[3px]   rounded-3xl uppercase flex justify-center items-center font-mono text-white w-[100%]   px-6 py-3 border-[2px] bg-[#116F6A]">
+              <button
+                onClick={() => handleDeleteBtn(itm._id)}
+                className="font-semibold absolute bottom-0   hover:bg-white hover:text-[#116F6A] duration-500 hover:border-[#116F6A] hover:border-[3px]   rounded-3xl uppercase flex justify-center items-center font-mono text-white w-[100%]   px-6 py-3 border-[2px] bg-[#116F6A]"
+              >
                 <span className="text-white">
                   {" "}
                   <AiFillDelete />
