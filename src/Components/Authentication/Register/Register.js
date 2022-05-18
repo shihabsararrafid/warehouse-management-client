@@ -14,6 +14,7 @@ import wrong from "./../../../Images/wrong.png";
 import right from "./../../../Images/right.jpg";
 import {
   useCreateUserWithEmailAndPassword,
+  useSignInWithGoogle,
   useUpdateProfile,
 } from "react-firebase-hooks/auth";
 import { createUserWithEmailAndPassword } from "firebase/auth";
@@ -21,6 +22,14 @@ import { useSendEmailVerification } from "react-firebase-hooks/auth";
 import { async } from "@firebase/util";
 import auth from "../../../firebase.init";
 const Register = () => {
+  const [signInWithGoogle, user, loading, error2] = useSignInWithGoogle(auth);
+  const googleSignIn = async (e) => {
+    e.preventDefault();
+    console.log(" hello");
+    await signInWithGoogle();
+    console.log(user);
+  };
+
   // const [
   //     createUserWithEmailAndPassword,
   //     user,
@@ -99,7 +108,10 @@ const Register = () => {
             SIGN UP FOR FREE TO{" "}
             <span className="text-[#116F6A]">ELECTRA WAREHOUSE</span>{" "}
           </h1>
-          <button className="text-center hover:text-[#116F6A] hover:border-[#116F6A] flex items-center justify-evenly  w-[90%] ] mx-auto  my-6 text-lg py-4 border-[1px] font-semibold border-black bg-white text-black rounded-full">
+          <button
+            onClick={googleSignIn}
+            className="text-center hover:text-[#116F6A] hover:border-[#116F6A] flex items-center justify-evenly  w-[90%] ] mx-auto  my-6 text-lg py-4 border-[1px] font-semibold border-black bg-white text-black rounded-full"
+          >
             <img className="w-[30px]" src={google} alt="" />{" "}
             <span>SIGN UP WITH GOOGLE</span>
           </button>

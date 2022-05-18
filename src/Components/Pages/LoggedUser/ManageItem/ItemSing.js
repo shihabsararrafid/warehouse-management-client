@@ -17,7 +17,7 @@ const ItemSing = ({ item }) => {
   const emaill = item.email;
   const found = emaill?.find((em) => em === user?.email);
   const addToMyItem = (itemId) => {
-    const url = `http://localhost:5000/addToMyItem/${itemId}?email=${user.email}`;
+    const url = `https://electra-warehouse-server-rafid.herokuapp.com/addToMyItem/${itemId}?email=${user.email}`;
     fetch(url, {
       method: "PUT",
       headers: {

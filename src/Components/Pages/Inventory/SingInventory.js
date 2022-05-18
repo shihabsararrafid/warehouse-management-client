@@ -30,8 +30,10 @@ const SingInventory = () => {
   const handleQuantity = () => {
     const newQuantity = parseInt(quantity) - 1;
     setQuantity(newQuantity);
-    updateData(newQuantity);
+    console.log(quantity);
+    updateData(quantity);
   };
+
   const handleRestock = (e) => {
     e.preventDefault();
     const amount = parseInt(e.target.amount.value);
@@ -43,6 +45,7 @@ const SingInventory = () => {
 
     e.target.amount.value = "";
   };
+
   const updateData = (any) => {
     //console.log(quantity - 1);
     const url = `https://electra-warehouse-server-rafid.herokuapp.com/inventory/${itemid}`;

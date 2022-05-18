@@ -15,7 +15,7 @@ const MyItem = () => {
   console.log(email);
   const [myItem, setMyItem] = useState([]);
   useEffect(() => {
-    const url = `http://localhost:5000/myItem/${email}`;
+    const url = `https://electra-warehouse-server-rafid.herokuapp.com/myItem/${email}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setMyItem(data));
@@ -23,7 +23,7 @@ const MyItem = () => {
   const handleDeleteBtn = (id) => {
     const confirmation = window.confirm(`Are You Sure to delete the Product ?`);
     if (confirmation) {
-      const url = `http://localhost:5000/inventory/${id}`;
+      const url = `https://electra-warehouse-server-rafid.herokuapp.com/inventory/${id}`;
       fetch(url, {
         method: "DELETE",
       })
