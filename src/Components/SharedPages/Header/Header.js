@@ -3,9 +3,23 @@ import { Link } from "react-router-dom";
 import { AiOutlineBars } from "react-icons/ai";
 import logo from "./../../../Images/warehouse logo.webp";
 import "./Header.css";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../../firebase.init";
+import { signOut } from "firebase/auth";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
+  const [user, loading, error] = useAuthState(auth);
+  const signingOut = (e) => {
+    e.preventDefault();
+    signOut(auth)
+      .then(() => {
+        alert("sign out successful");
+      })
+      .catch((error) => {
+        alert("error occured while signing out");
+      });
+  };
   //console.log(open);
   return (
     <div
@@ -36,9 +50,42 @@ const Header = () => {
             <Link className="nav-bar" to="/about">
               about
             </Link>
-            <Link className="nav-bar" to="/login">
-              login
-            </Link>
+            <div className="group">
+              {user ? (
+                <button
+                  className="block hover:text-red-600 font-bold uppercase box-border duration-700 border-black"
+                  onClick={signingOut}
+                >
+                  Sign out
+                </button>
+              ) : (
+                <>
+                  <Link
+                    className="block hover:text-[#07F31F]  box-border duration-700 border-black"
+                    to="/login"
+                  >
+                    Login
+                  </Link>
+                  <div className="    group-hover:border-[#07F31F] duration-700 border-black"></div>
+                </>
+              )}
+              {user ? (
+                <div className="flex items-center">
+                  <p className="text-sm text-violet-600">
+                    {user.displayName?.slice(0, 12)}
+                  </p>
+                  <div className="w-[60px] rounded-full flex justify-center bg-white">
+                    <img
+                      className="w-[50px] p-1  rounded-full"
+                      src={user.photoURL ? user.photoURL : ""}
+                      alt=""
+                    />
+                  </div>
+                </div>
+              ) : (
+                ""
+              )}
+            </div>
           </div>
           <li onClick={() => setOpen(!open)} className="w-[10px] lg:hidden">
             <AiOutlineBars />

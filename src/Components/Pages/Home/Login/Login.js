@@ -30,9 +30,9 @@ const Login = () => {
   let from = location.state?.from?.pathname || "/";
   const [password, setPassword] = useState("");
   const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
-  const googleSignIn = (e) => {
+  const googleSignIn = async (e) => {
     e.preventDefault();
-    signInWithGoogle();
+    await signInWithGoogle();
     console.log(user);
     if (user) {
       setTimeout(() => {
@@ -43,7 +43,10 @@ const Login = () => {
       setTimeout(() => {
         const msg = document.getElementById("success");
         msg.style.display = "none";
-      }, 9000);
+      }, 5000);
+      setTimeout(() => {
+        navigate(from, { replace: true });
+      }, 6000);
     }
     if (error) {
       const newmsg = error.message;
@@ -81,7 +84,9 @@ const Login = () => {
             const msg = document.getElementById("success");
             msg.style.display = "none";
           }, 9000);
-          navigate(from, { replace: true });
+          setTimeout(() => {
+            navigate(from, { replace: true });
+          }, 10000);
         }
         // ...
       })
