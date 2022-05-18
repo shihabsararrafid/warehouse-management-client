@@ -6,6 +6,7 @@ import Banner from "./Banner/Banner";
 import Item from "./Items/Item";
 import { Link } from "react-router-dom";
 import Supplier from "./Supplier/Supplier";
+import Work from "./Work/Work";
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
           Manage Inventories
         </button>
       </Link>
+      <Work></Work>
       <Supplier></Supplier>
     </div>
   );

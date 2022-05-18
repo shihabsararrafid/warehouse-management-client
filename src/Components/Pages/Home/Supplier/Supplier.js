@@ -14,9 +14,9 @@ const Supplier = () => {
         Our Valueable Supplier
       </h1>
       <p className="text-xl font-serif w-full lg:w-[80%] mx-auto">
-        We store diiferent type products for our main website as we sell all
-        types of electronics. So it is hard for us to import all the products as
-        a result we take help from other importer .
+        {" "}
+        It is hard for us to import all the products as a result we take help
+        from other importer .
       </p>
       <p className="text-4xl my-10 font-bold text-left ml-20">
         Here is the list of our some suppliers:
