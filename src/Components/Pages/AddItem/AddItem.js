@@ -12,7 +12,8 @@ const AddItem = () => {
     reset,
   } = useForm();
   const onSubmit = (data, e) => {
-    const url = "http://localhost:5000/inventory";
+    const url =
+      "https://electra-warehouse-server-rafid.herokuapp.com/inventory";
     fetch(url, {
       method: "POST",
       headers: {

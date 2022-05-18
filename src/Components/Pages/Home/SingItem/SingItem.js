@@ -16,7 +16,7 @@ const SingItem = ({ getId, item, open }) => {
     );
     if (confirmation) {
       getId(id);
-      const url = `http://localhost:5000/inventory/${id}`;
+      const url = `https://electra-warehouse-server-rafid.herokuapp.com/inventory/${id}`;
       fetch(url, {
         method: "DELETE",
       })
