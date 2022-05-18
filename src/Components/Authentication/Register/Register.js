@@ -21,6 +21,7 @@ import { createUserWithEmailAndPassword } from "firebase/auth";
 import { useSendEmailVerification } from "react-firebase-hooks/auth";
 import { async } from "@firebase/util";
 import auth from "../../../firebase.init";
+
 const Register = () => {
   const [signInWithGoogle, user, loading, error2] = useSignInWithGoogle(auth);
   const googleSignIn = async (e) => {
@@ -47,6 +48,7 @@ const Register = () => {
     createUserWithEmailAndPassword(auth, email, password)
       .then(async (res) => {
         if (res) {
+          sendEmailVerification();
           // console.log(res.user);
           await updateProfile({ displayName: name });
           // console.log(res.user);
