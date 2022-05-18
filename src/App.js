@@ -13,6 +13,7 @@ import NotFound from "./Components/Pages/NotFound/NotFound";
 import ManageItem from "./Components/Pages/LoggedUser/ManageItem/ManageItem";
 import MyItem from "./Components/Pages/LoggedUser/MyItem/MyItem";
 import RequireAuth from "./Components/RequireAuth/RequieAuth";
+import Blogs from "./Components/Pages/Blogs/Blogs";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/additem" element={<AddItem></AddItem>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/register" element={<Register></Register>}></Route>
+        <Route path="/blogs" element={<Blogs></Blogs>}></Route>
         <Route
           path="/inventory/:id"
           element={
