@@ -32,12 +32,7 @@ const Blogs = () => {
         <h1 className="text-4xl text-[#116F6A] text-justify my-4 ">
           When should you use nodejs?
         </h1>
-        <p className="text-justify">
-          Specially for javascript programmer it is easy to use node because it
-          gives the feel of javascript in back end . But the main reason is when
-          server side code requires very few cpu cycle and not require any heavy
-          algorithm then it is convenient to use node js.
-        </p>
+
         <h1 className="text-4xl text-[#116F6A] text-justify my-4 ">
           When should you use mongodb?
         </h1>
